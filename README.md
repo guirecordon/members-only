@@ -1,5 +1,3 @@
-# Authentication and Authorization Rails Project
+# Development Branch
 
-This project is a collaborative one as part of Microverse programming school done by Jocelyn Magero and Gui Recordon.
-
-More instraction on development branch.
+All features will convert here to this branch.
