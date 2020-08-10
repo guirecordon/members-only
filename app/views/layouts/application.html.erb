@@ -13,5 +13,9 @@
     <%= yield %>
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
+    <% if user_signed_in? %>
+      <%= link_to current_user.name, edit_user_registration_path %>
+      <%= link_to "Log_out", destroy_user_session_path, method: :delete %>
+    <%end%>
   </body>
 </html>
