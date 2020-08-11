@@ -1,29 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<div class="love-wrapper">
+  <div class="main d-flex flex-column align-items-center">
+    <h1>Posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Post</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <table>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.post %></td>
-        <% if user_signed_in? %>  
-          <td><%= post.user.name %></td>
-        <% end %> 
-      </tr>
+      <tbody>
+        <% @posts.each do |post| %>
+          <tr>
+            <td><%= post.post %></td>
+            <% if user_signed_in? %>  
+              <td><%= post.user.name %></td>
+            <% end %> 
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+    <% if user_signed_in? %>
+    <%= link_to 'New Post', new_post_path %>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-<% if user_signed_in? %>
-<%= link_to 'New Post', new_post_path %>
-<% end %>
+  </div>
+</div>
 
