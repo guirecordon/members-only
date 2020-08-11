@@ -19,7 +19,20 @@
  }
 
  .love-wrapper {
-   background: blueviolet;
+   border: 1px solid gray;
+ }
+
+ .post_container {
+   border: 1px solid gray;
+   padding: 15px;
+ }
+
+ .post_body {
+   font-size: 18px;
+ }
+
+ .username {
+   font-size: 14px;
  }
 
 

@@ -2,26 +2,22 @@
 
 <div class="love-wrapper">
   <div class="main d-flex flex-column align-items-center">
-    <h1>Posts</h1>
+    <h4>Home</h4>
 
-    <table>
-
-      <tbody>
-        <% @posts.each do |post| %>
-          <tr>
-            <td><%= post.post %></td>
-            <% if user_signed_in? %>  
-              <td><%= post.user.name %></td>
-            <% end %> 
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-
-    <br>
     <% if user_signed_in? %>
-    <%= link_to 'New Post', new_post_path %>
+      <%= render 'form', post: @post %>
     <% end %>
+   
+    
+      <% @posts.each do |post| %>
+        <div class="post_container w-100">
+          <% if user_signed_in? %>  
+            <p class="username"><%= post.user.name %></p>
+          <% end %>
+            <p class="post_body"><%= post.post %></p>
+        </div>  
+      <% end %>    
+
   </div>
 </div>
 
