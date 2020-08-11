@@ -10,25 +10,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
   </head>
 
   <body>
+      <% if flash[:alert]%>
+      <p class="alert"><%= alert %></p>
+      <% end %>
       <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand"><%= link_to "Members'", root_path %></a>
         <form class="form-inline">
+          <% if user_signed_in? %>
+            <%= link_to current_user.name, edit_user_registration_path %><br>
+            <%= link_to "Log_out", destroy_user_session_path, method: :delete %>
+          <% else %>
           <button type="button" class="btn btn-outline-success m-2"><%= link_to "Sign_up", new_user_registration_path %></button>
           <button type="button" class="btn btn-light m-2"><%= link_to "Log_in", new_user_session_path %></button>
+          <%end%>
         </form>
-    </nav>
-    <p class="alert"><%= alert %></p>
+      </nav>
+    
+     
     <%= yield %>
-    <% if user_signed_in? %>
-      <%= link_to current_user.name, edit_user_registration_path %><br>
-      <%= link_to "Log_out", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Log_in", new_user_session_path %><br>
-      <%= link_to "Sign_up", new_user_registration_path %>  
-    <%end%>
   </body>
 </html>
