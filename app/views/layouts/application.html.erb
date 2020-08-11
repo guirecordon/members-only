@@ -10,12 +10,15 @@
   </head>
 
   <body>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+
     <% if user_signed_in? %>
-      <%= link_to current_user.name, edit_user_registration_path %>
+      <%= link_to current_user.name, edit_user_registration_path %><br>
       <%= link_to "Log_out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Sign_in", new_user_session_path %><br>
+      <%= link_to "Sign_up", new_user_registration_path %>  
     <%end%>
   </body>
 </html>
