@@ -7,17 +7,27 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
   </head>
 
   <body>
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">Home</a>
+        <form class="form-inline">
+          <button type="button" class="btn btn-outline-success m-2">Sign_up</button>
+          <button type="button" class="btn btn-light m-2">Log_in</button>
+        </form>
+    </nav>
     <p class="alert"><%= alert %></p>
     <%= yield %>
-
     <% if user_signed_in? %>
       <%= link_to current_user.name, edit_user_registration_path %><br>
       <%= link_to "Log_out", destroy_user_session_path, method: :delete %>
     <% else %>
-      <%= link_to "Sign_in", new_user_session_path %><br>
+      <%= link_to "Log_in", new_user_session_path %><br>
       <%= link_to "Sign_up", new_user_registration_path %>  
     <%end%>
   </body>
