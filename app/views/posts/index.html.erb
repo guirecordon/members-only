@@ -2,10 +2,12 @@
 
 <div class="love-wrapper">
   <div class="main d-flex flex-column align-items-center">
-    <h1>Posts</h1>
+    <h1 class="heading">Home</h1>
 
     <table>
-
+      <% if user_signed_in? %>
+        <%= render 'form', post: @post %>
+      <% end %>
       <tbody>
         <% @posts.each do |post| %>
           <tr>
@@ -19,9 +21,6 @@
     </table>
 
     <br>
-    <% if user_signed_in? %>
-    <%= link_to 'New Post', new_post_path %>
-    <% end %>
   </div>
 </div>
 
