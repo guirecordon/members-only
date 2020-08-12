@@ -13,7 +13,6 @@
   </head>
 
   <body>
-    <div class="main">
 
       <% if flash[:alert]%>
       <p class="alert"><%= alert %></p>
@@ -30,8 +29,9 @@
           <%end%>
         </form>
       </nav>
+  <div class="main">
     <%= yield %>
-    </div> 
+  </div> 
     
   </body>
 </html>

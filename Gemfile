@@ -62,5 +62,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
-
 gem 'hirb'
+gem 'bootstrap', '~> 4.5', '>= 4.5.2'
+gem 'jquery-rails'
+
