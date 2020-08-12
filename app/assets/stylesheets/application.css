@@ -15,13 +15,14 @@
  */
 
  .heading {
-   color: a;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  }
 
  .love-wrapper {
-   background: blueviolet;
+   background:blueviolet;
+   max-width: 500px;
+   margin: 0 auto;
  }
-
 
 
 
