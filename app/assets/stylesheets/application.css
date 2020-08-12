@@ -15,16 +15,20 @@
  */
 
  .main {
-   background-color: orange;
+   background-color: gainsboro;
+   max-width: 940px;
+   margin: 0 auto;
+   color: rgb(88, 124, 255);
+
  }
 
  .heading {
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  }
 
- .love-wrapper {
-   background:blueviolet;
-   max-width: 875px;
+ .form-wrapper {
+   padding: 10px;
+   max-width: 300px;
    margin: 0 auto;
  }
 
@@ -32,6 +36,9 @@
    width: 100%;
  }
 
-
+a:hover {
+  text-decoration: none;
+  color: none;
+}
 
  
