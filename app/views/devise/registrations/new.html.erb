@@ -1,46 +1,41 @@
-<div class = "love-wrapper d-flex flex-column align-items-center">
-  <h2 class="heading">Sign up</h2>
-  <div class = "main">
+
+    <h2>Sign up</h2>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
-      <div class="field">
+      <div>
         <%= f.label :name %><br />
-        <div class = "input">
-          <%= f.text_field :name,
-            required: true, autofocus: true, autocomplete: "name" %>
-        </div>
-        
+        <%= f.text_field :name,
+          required: true, autofocus: true, autocomplete: "name", class: "form-we" %>
       </div>
 
-      <div class="field">
+      <div >
         <%= f.label :username %><br />
-        <%= f.text_field :username, required: true, autocomplete: "username" %>
+        <%= f.text_field :username, required: true, autocomplete: "username", class: "form-we" %>
       </div>
 
-      <div class="field">
+      <div >
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-we" %>
       </div>
 
 
-      <div class="field">
+      <div >
         <%= f.label :password %>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %><br />
-        <%= f.password_field :password, autocomplete: "new-password" %>
+        <%= f.password_field :password, autocomplete: "new-password", class: "form-we" %>
       </div>
 
-      <div class="field">
+      <div >
         <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-we" %>
       </div>
 
-      <div class="actions">
+      <div >
         <%= f.submit "Sign up" %>
       </div>
     <% end %>
-  </div>
-</div>
+
 

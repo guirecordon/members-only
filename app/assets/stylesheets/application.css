@@ -14,14 +14,22 @@
  *= require_self
  */
 
+ .main {
+   background-color: orange;
+ }
+
  .heading {
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  }
 
  .love-wrapper {
    background:blueviolet;
-   max-width: 500px;
+   max-width: 875px;
    margin: 0 auto;
+ }
+
+ .form-we {
+   width: 100%;
  }
 
 
