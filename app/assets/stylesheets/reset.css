@@ -54,3 +54,16 @@ a {
 a:hover {
 	text-decoration: none;
 }
+
+ .navbar,
+ .navbar a,
+ .navbar a:hover {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+	display: block;
+ }
