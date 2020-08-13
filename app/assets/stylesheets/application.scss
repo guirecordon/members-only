@@ -1,35 +1,36 @@
 //= require reset
 
 @import "bootstrap";
-  body {
-    font-family: Bitter;
-  }
 
- .main {
-   background-color: gainsboro;
-   width: 100vw;
-   color: #007BFF;
-   height: 100vh;
-   padding: 2.5px 10px 20px 5px;
- }
+body {
+  font-family: Bitter, sans-serif;
+}
 
- .form-wrapper {
-   padding: 10px;
-   max-width: 300px;
-   margin: 0 auto;
-   background-color: #f3f3f3;
- }
+.main {
+  background-color: gainsboro;
+  width: 100vw;
+  color: #007bff;
+  height: 100vh;
+  padding: 2.5px 10px 20px 5px;
+}
 
- .form-we {
-   width: 100%;
- }
+.form-wrapper {
+  padding: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #f3f3f3;
+}
+
+.form-we {
+  width: 100%;
+}
 
 .navbarwe {
   display: flex;
   justify-content: center;
 }
 
-.member-box{
+.member-box {
   padding: 10px;
   font-family: 'Permanent Marker', cursive;
   font-size: 2rem;
@@ -68,7 +69,7 @@
 }
 
 .user_name {
-  color: rgba($color: #1e0579, $alpha: 1.0);
+  color: rgba($color: #1e0579, $alpha: 1);
   font-size: 0.9rem;
   font-family: fantasy;
 }
