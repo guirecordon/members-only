@@ -2,20 +2,20 @@
 
     <h4 class="heading">Home</h4>
 
-    <table>
+    <div>
       <% if user_signed_in? %>
         <%= render 'form', post: @post %>
       <% end %>
-      <tbody>
+      <div>
         <% @posts.each do |post| %>
-          <tr>
-            <td><%= post.post %></td>
+          <div class="user-posts">
             <% if user_signed_in? %>  
-              <td><%= post.user.name %></td>
-            <% end %> 
-          </tr>
+              <div class="user_name"><%= post.user.name %></div>
+            <% end %>
+            <div class="post"><%= post.post %></div>
+          </div>
         <% end %>
-      </tbody>
-    </table>
+      </div>
+    </div>
 
     <br>

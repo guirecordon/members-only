@@ -53,10 +53,29 @@
   padding: 0;
 }
 
-.heading {
-}
-
 .rails-form {
   margin: 0;
   padding: 0;
+}
+
+.user-posts {
+  border: solid 0.5px darkgray;
+  background-color: rgb(255, 255, 255);
+  padding: 2px;
+  margin: 10px 0;
+  border-radius: 2px;
+  max-width: 600px;
+}
+
+.user_name {
+  color: rgba($color: #1e0579, $alpha: 1.0);
+  font-size: 0.9rem;
+  font-family: fantasy;
+}
+
+.create-button {
+  justify-content: flex-end;
+  margin-top: 0.2rem;
+  border-radius: 5%;
+  border: solid 0.1rem whitesmoke;
 }

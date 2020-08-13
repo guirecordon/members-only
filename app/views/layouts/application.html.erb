@@ -17,7 +17,7 @@
 
   </head>
 
-  <body>
+  <body> 
 
       <% if flash[:alert]%>
       <p class="alert"><%= alert %></p>
@@ -37,7 +37,7 @@
               <button type="button" class="btn btn-light-primary"><%= link_to "Log_in", new_user_session_path %></button>
           <%end%>
         </div>
-  <div class="main">
+  <div class="main d-flex flex-column align-items-center">
     <%= yield %>
   </div> 
     
