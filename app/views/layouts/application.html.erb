@@ -27,20 +27,16 @@
         <div class="member-box">
             <a><%= link_to "Members'only", root_path %></a>
         </div>
-        <div class="login-box">
+      </nav>
+      <div class="login-box">
           <% if user_signed_in? %>
-            <div class="">
-              <%= link_to current_user.name, edit_user_registration_path %>
+              <%= link_to current_user.name , edit_user_registration_path %>
               <%= link_to "Log_out", destroy_user_session_path, method: :delete %>
-            </div>
           <% else %>
-            <div>
               <button type="button" class="btn btn-outline-primary"><%= link_to "Sign_up", new_user_registration_path %></button>
               <button type="button" class="btn btn-light-primary"><%= link_to "Log_in", new_user_session_path %></button>
-            </div> 
           <%end%>
         </div>
-      </nav>
   <div class="main">
     <%= yield %>
   </div> 

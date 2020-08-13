@@ -1,4 +1,4 @@
-<%= form_with(model: post, local: true) do |form| %>
+<%= form_with(model: post, local: true, class: "rails-form") do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -11,8 +11,8 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.text_area :post, placeholder: "What is happening?" %>
+  <div class="post_area">
+    <%= form.text_area :post, placeholder: "What is happening?", class:"post_area" %>
   </div>
 
   <div class="actions">

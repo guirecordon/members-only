@@ -67,3 +67,8 @@ a:hover {
 	text-decoration: none;
 	display: block;
  }
+
+ h4 {
+	 margin: 0;
+	 padding: 0;
+ }
