@@ -40,7 +40,7 @@ This assignment consists of using the Devise gem to have a first approach at aut
 
 This project aimed to learn the basics of authentication using devise gem.
 
-We started the project by setting up the backend. 
+We started the project by setting up the following. 
 
 * Designed a data model for this application having Users with simple identification attributes like `:name`, `:email` and `:password`.
 * We connected the user's table to the post's table by the foreign key `:user_id`.
