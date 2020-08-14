@@ -3,15 +3,12 @@
     <h4 class="heading">Home</h4>
 
     <div>
-      <% if user_signed_in? %>
-        <%= render 'form', post: @post %>
-      <% end %>
+      <%= render_form %>
+    
       <div>
         <% @posts.each do |post| %>
           <div class="user-posts">
-            <% if user_signed_in? %>  
-              <div class="user_name"><%= post.user.name %></div>
-            <% end %>
+            <div class="user_name"><%= user_name(post) %></div>
             <div class="post"><%= post.post %></div>
           </div>
         <% end %>
