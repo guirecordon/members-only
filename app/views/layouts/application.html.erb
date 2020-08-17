@@ -7,9 +7,33 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../../assets/stylesheets/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter">
+
+    
+
   </head>
 
-  <body>
+  <body> 
+
+      <div>
+        <%= flash_helper %>
+      </div>
+      
+      <nav class="navbarwe">
+        <div class="member-box">
+            <a><%= link_to "Members'only", root_path %></a>
+        </div>
+      </nav>
+      <div class="login-box">
+        <%= sign_in(@user)%>
+      </div>
+  <div class="main d-flex flex-column align-items-center">
     <%= yield %>
+  </div> 
+    
   </body>
 </html>

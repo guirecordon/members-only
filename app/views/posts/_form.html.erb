@@ -1,0 +1,19 @@
+<%= form_with(model: post, local: true, class: "rails-form") do |form| %>
+  <div id="error_explanation">
+    <h2><%= error_message(post) %> </h2>
+    <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+
+
+  <div class="post_area">
+    <%= form.text_area :post, placeholder: "What is happening?", class:"post_area" %>
+  </div>
+
+  <div class="actions d-flex justify-content-center">
+    <%= form.submit :create, class: "create-button" %>
+  </div>
+<% end %>
